@@ -4,11 +4,12 @@ import React from 'react'
 const Ecommerce = () => {
   return (
         <SafeAreaView>
-            View
+            
             <View style={styles.mainContainer}>
-            <View style={styles.title}>
+            <Text style={styles.title}>
+                Ecommerce
 
-                </View>
+                </Text>
 
             </View>
         </SafeAreaView>
@@ -16,7 +17,15 @@ const Ecommerce = () => {
 };
 
 const styles = StyleSheet.create({
+    mainContainer:{
+        
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     title:{
+        fontSize: 20,
+        fontWeight: "bold",
+        
 
     }
 })
