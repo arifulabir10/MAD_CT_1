@@ -1,6 +1,42 @@
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
 import React from 'react'
 import { Button } from 'react-native';
+import axios from "axios";
+
+export interface FakeProduct{
+    id: number
+    title: string
+    price: number 
+    description: string
+    category: string 
+    image: string 
+    rating: productRating[] 
+}
+export interface productRating{
+    rate: number 
+    count: number
+}
+
+const [products, setProducts] = useState('')
+
+
+const handleGetProducts = async() => {
+    const response = await axios.get(`https://fakestoreapi.com/products`)
+    setProductsFromAPI(response.data)
+}
+
+const setProductsFromAPI = (response: FakeProduct) =>
+{
+    if(response.rating.length > 0)
+    {
+        setProducts(response.id)
+    }
+    else
+    {
+        setProducts("")
+    }
+
+}
 
 const Ecommerce = () => {
   return (
@@ -10,6 +46,7 @@ const Ecommerce = () => {
             <Text style={styles.title}>
                 Ecommerce
                 </Text>
+                <Button title="Show Products" onPress={handleGetProducts} />
 
                 <View style={styles.cartItem}>
                     <Text style={styles.productName}>Tide Powder</Text>
@@ -57,3 +94,7 @@ const styles = StyleSheet.create({
     }
 })
 export default Ecommerce;
+
+function useState(arg0: string): [any, any] {
+    throw new Error('Function not implemented.');
+}
