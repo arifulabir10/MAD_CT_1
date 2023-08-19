@@ -18,26 +18,7 @@ const Ecommerce = () => {
                     <Button title="Add to cart"/>
                 </View>
 
-                <View style={styles.cartItem}>
-                    <Text style={styles.productName}>Onion</Text>
-                    <Text style={styles.productCategory}>Daily Needs</Text>
-                    <Text style={styles.productWeight}>1 kg</Text>
-                    <Button title="Add to cart"/>
-                </View>
-
-                <View style={styles.cartItem}>
-                    <Text style={styles.productName}>Milk Vita</Text>
-                    <Text style={styles.productCategory}>Dairy Product</Text>
-                    <Text style={styles.productWeight}>1 litre</Text>
-                    <Button title="Add to cart"/>
-                </View>
-
-                <View style={styles.cartItem}>
-                    <Text style={styles.productName}>Amul Butter</Text>
-                    <Text style={styles.productCategory}>Dairy Product</Text>
-                    <Text style={styles.productWeight}>500 gm</Text>
-                    <Button title="Add to cart"/>
-                </View>
+                
 
             </View>
         </SafeAreaView>
